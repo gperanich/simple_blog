@@ -1,0 +1,17 @@
+<div class="jumbotron">
+    <h1>GPLA</h1>
+    <p>A quest to find the good vibrations. ¡Pura Vida!</p>
+    <p><a class="btn btn-primary btn-lg" href="/" role="button">Blog Posts</a></p>
+</div>
+<div id="single-blog" ng-model="singleBlog">
+    <div id="single-header">
+        <h3>{{ singleBlog.title }}</h3>
+        <p>{{ singleBlog.firstname }} {{ singleBlog.lastname }}</p>
+        <p>{{ singleBlog.category }}</p>
+        <p>{{ singleBlog.createdAt | date: 'short' }}</p>
+        <button id="single-edit" ng-click="editBlog()">Edit</button><button id="single-delete" ng-click="deleteBlog()">Delete</button>
+    </div>
+    <div id="single-content">
+        <div>{{ singleBlog.content }}</div>
+    </div>
+</div>

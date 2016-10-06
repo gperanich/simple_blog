@@ -1,0 +1,56 @@
+.input-group {
+    width: 100%;
+    margin-top: 10px
+}
+#input-text {
+    height: 1000px;
+    width: 100%
+}
+.input-group-btn {
+    padding-top: 7.5px;
+    width: 100px;
+    float:right
+}
+#new-blog-button {
+    float: right
+}
+#enter-title {
+    width: 200px;
+}
+div.form-group {
+    width: 200px;
+    float: left;
+    padding-top: 7.5px
+}
+#blogs-body {
+    height: 300px
+}
+.new-blog {
+    margin-top: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightslategray
+}
+.blog-header {
+    height: 50px
+}
+#blog-title {
+    width: 70%;
+    height: 50px;
+    float: left
+}
+#blog-button {
+    margin-left: -150px
+}
+.delete-btn {
+    float: right;
+    margin-bottom: 20px
+}
+.name-name {
+    float: left;
+    margin-left: 10px
+}
+.title-div {
+    float: left;
+    font-size: 2em
+}
