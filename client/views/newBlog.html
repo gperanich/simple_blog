@@ -1,44 +1,54 @@
-<div class="jumbotron">
-    <h1>GPLA</h1>
-    <p>A quest to find the good vibrations. ¡Pura Vida!</p>
-    <p><a class="btn btn-primary btn-lg" href="/" role="button">Blog Posts</a></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1>GPLA</h1>
+                <p>A quest to find the good vibrations. ¡Pura Vida!</p>
+                <p><a class="btn btn-primary btn-lg" href="/" role="button">Blog Posts</a></p>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="blog-input">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div id="blog-input">
+                        <div class="input-group">
+                            <span class="input-group-addon">Title</span>
+                            <input type="text" class="form-control" id="blog-title" ng-model="title">
+                            <span class="input-group-btn">
+                                <button id="blog-button" class="btn btn-primary" ng-click="postBlog()">Submit</button>
+                            </span>
+                        </div>
+                        <select id="user-selector" ng-model="selectedUser">
+                            <option value="">Select User</option>
+                            <option value="{{ user.id }}" ng-repeat="user in users">{{ user.firstname }} {{ user.lastname }}</option>
+                        </select>
+                        <select id="category-selector" ng-model="selectedCategory">
+                            <option value="">Select Category</option>
+                            <option value="{{ category.id }}" ng-repeat="category in categories">{{ category.name }}</option>
+                        </select>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </nav>
+            <div class="container">
                 <div class="input-group">
-                    <span class="input-group-addon">Title</span>
-                    <input type="text" class="form-control" id="blog-title" ng-model="title">
-                    <span class="input-group-btn">
-                        <button id="blog-button" class="btn btn-primary" ng-click="postBlog()">Submit</button>
-                    </span>
+                    <textarea type="text" class="form-control" id="input-text" ng-model="newBlogContent" placeholder="Type Blog Post..."></textarea>
                 </div>
-                <select id="user-selector" ng-model="selectedUser">
-                    <option value="">Select User</option>
-                    <option value="{{ user.id }}" ng-repeat="user in users">{{ user.firstname }} {{ user.lastname }}</option>
-                </select>
-                <select id="category-selector" ng-model="selectedCategory">
-                    <option value="">Select Category</option>
-                    <option value="{{ category.id }}" ng-repeat="category in categories">{{ category.name }}</option>
-                </select>
             </div>
-        </div><!-- /.container-fluid -->
-    </nav>
-    <div class="container">
-        <div class="input-group">
-            <textarea type="text" class="form-control" id="input-text" ng-model="newBlogContent" placeholder="Type Blog Post..."></textarea>
         </div>
     </div>
 </div>

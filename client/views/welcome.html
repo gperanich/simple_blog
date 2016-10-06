@@ -1,26 +1,40 @@
-<div class="jumbotron">
-    <h1>GPLA</h1>
-    <p>A quest to find the good vibrations. ¡Pura Vida!</p>
-    <p><a class="btn btn-primary btn-lg" href="/compose" role="button">New Blog Post</a></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1>GPLA</h1>
+                <p>A quest to find the good vibrations. ¡Pura Vida!</p>
+                <p><a class="btn btn-primary btn-lg" href="/compose" role="button">New Blog Post</a></p>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="containter">
-    <div class="header">
-        <h3>Blogs</h3>
+<div class="containter-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header">
+                <h3>Blogs</h3>
+            </div>
+        </div>
     </div>
 </div>
 <div class="container">
-    <div class="blogs-body">
-        <div class="new-blog" ng-repeat="blog in blogs">
-            <div class="blogs-header">
-                <h3>{{ blog.title }}</h3>
-                <p id="blog-username">{{ blog.firstname }} {{ blog.lastname }}</p>
-                <p id="blog-categoryname">{{ blog.name }}</p>
-                <p id="blog-timestamp">{{ blog.createdAt | date: 'short' }} </p>
-                <a href="/{{ blog.id }}">Read</a>
-            </div>
-            <br>
-            <div class="blogs-content">
-                <div>{{ blog.content }}</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="blogs-body">
+                <div class="new-blog" ng-repeat="blog in blogs">
+                    <div class="blogs-header">
+                        <h3>{{ blog.title }}</h3>
+                        <p id="blog-username">{{ blog.firstname }} {{ blog.lastname }}</p>
+                        <p id="blog-categoryname">{{ blog.name }}</p>
+                        <p id="blog-timestamp">{{ blog.createdAt | date: 'short' }} </p>
+                        <a href="/{{ blog.id }}">Read</a>
+                    </div>
+                    <br>
+                    <div class="blogs-content">
+                        <div>{{ blog.content }}</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
