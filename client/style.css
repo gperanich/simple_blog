@@ -31,8 +31,10 @@ div.form-group {
     border-width: 2px;
     border-color: lightslategray
 }
-.blog-header {
-    height: 50px
+.blogs-header {
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: lightslategray
 }
 #blog-title {
     width: 70%;
@@ -53,4 +55,16 @@ div.form-group {
 .title-div {
     float: left;
     font-size: 2em
+}
+#blog-username {
+    float: left;
+    margin-right: 10px
+}
+#blog-categoryname {
+    float: left;
+    margin-right: 10px
+}
+#blog-timestamp {
+    float: left;
+    margin-right: 10px
 }

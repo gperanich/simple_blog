@@ -20,12 +20,12 @@
             <div id="blog-input">
                 <div class="input-group">
                     <span class="input-group-addon">Title</span>
-                    <input type="text" class="form-control" id="blog-title" ng-model="title" placeholder="{{ singleBlog.title }}">
+                    <input type="text" class="form-control" id="blog-title" ng-model="singleBlog.title" placeholder="Enter Title...">
                     <span class="input-group-btn">
-                        <button id="blog-button" class="btn btn-primary" ng-click="postBlog()">Submit</button>
+                        <button id="blog-button" class="btn btn-primary" ng-click="updateBlog()">Submit</button>
                     </span>
                 </div>
-                <select id="category-selector" ng-model="selectedCategory">
+                <select id="category-selector" ng-model="singleBlog.categoryid">
                     <option value="">Select Category</option>
                     <option value="{{ category.id }}" ng-repeat="category in categories">{{ category.name }}</option>
                 </select>
@@ -34,7 +34,7 @@
     </nav>
     <div class="container">
         <div class="input-group">
-            <textarea type="text" class="form-control" id="input-text" ng-model="newBlogContent" placeholder="{{ singleBlog.content }}"></textarea>
+            <textarea type="text" class="form-control" id="input-text" ng-model="singleBlog.content" placeholder="Enter Text..."></textarea>
         </div>
     </div>
 </div>

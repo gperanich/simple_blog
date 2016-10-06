@@ -32,6 +32,7 @@ angular.module('SimpleBlog.controllers', [])
 
 .controller('UpdateBlogController', ['$scope', '$routeParams', '$location', 'Posts', 'Users', 'Categories', function($scope, $routeParams, $location, Posts, Users, Categories) {
     $scope.singleBlog = Posts.get({ id: $routeParams.id });
+    $scope.categories = Categories.query();
 
     $scope.updateBlog = function() {
         $scope.singleBlog.$update();

@@ -50,7 +50,7 @@ app.route('/api/posts/:id')
     })
     .put(function(req, res) {
         var request = requestObj.updateBlog;
-        request.params = [req.params.id, req.body.content];
+        request.params = [req.params.id, req.body.title, req.body.categoryid, req.body.content];
         blogRequest(request)
             .then(function(blog) {
                 res.status(204).send(blog);
@@ -134,7 +134,7 @@ var requestObj = {
         query: 'CALL NewBlog(?,?,?,?);'
     },
     updateBlog: {
-        query: 'CALL UpdateBlog(?,?)'
+        query: 'CALL UpdateBlog(?,?,?,?)'
     }
 };
 
