@@ -1,10 +1,79 @@
-.input-group {
-    width: 100%;
-    margin-top: 10px
+/* Cross html css */
+.jumbotron {
+    background-color: #FEDC3D;
+    color: black;
+    margin-top: 15px 
 }
+body {
+    background-color: #01ABBA
+}
+/* welcome.html css */
+.blogs-header {
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: lightslategray
+}
+#blog-username {
+    float: left;
+    margin-right: 10px
+}
+#blog-categoryname {
+    float: left;
+    margin-right: 10px
+}
+#blog-timestamp {
+    float: left;
+    margin-right: 10px
+}
+#blogs-body {
+    height: 300px
+}
+.new-blog {
+    margin-top: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FEDC3D;
+    background-color: white;
+    margin: 10px;
+    padding: 10px
+}
+.blogs-body {
+    background-color: #FEA680
+}
+.blogs-conatiner {
+    background-color: #FEA680;
+    padding: 10px;
+}
+/* singleBlog.html css */
+.delete-btn {
+    float: right;
+    margin-bottom: 20px
+}
+#single-blog {
+    background-color: white
+}
+#single-header {
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #FEA680;
+    margin-bottom: 10px
+}
+/* newBlog.html % updateBlog.html css */
 #input-text {
     height: 1000px;
     width: 100%
+}
+#blog-button {
+    margin-left: -150px
+}
+#blog-title {
+    width: 70%;
+    height: 50px;
+    float: left
+}
+.input-group {
+    width: 100%;
+    margin-top: 10px
 }
 .input-group-btn {
     padding-top: 7.5px;
@@ -25,32 +94,6 @@ div.form-group {
 .header {
     margin-left: 5%
 }
-#blogs-body {
-    height: 300px
-}
-.new-blog {
-    margin-top: 30px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: lightslategray
-}
-.blogs-header {
-    border-bottom-style: dashed;
-    border-bottom-width: 1px;
-    border-bottom-color: lightslategray
-}
-#blog-title {
-    width: 70%;
-    height: 50px;
-    float: left
-}
-#blog-button {
-    margin-left: -150px
-}
-.delete-btn {
-    float: right;
-    margin-bottom: 20px
-}
 .name-name {
     float: left;
     margin-left: 10px
@@ -59,15 +102,6 @@ div.form-group {
     float: left;
     font-size: 2em
 }
-#blog-username {
-    float: left;
-    margin-right: 10px
-}
-#blog-categoryname {
-    float: left;
-    margin-right: 10px
-}
-#blog-timestamp {
-    float: left;
-    margin-right: 10px
+#navbar {
+    background-color: #FEA680
 }
