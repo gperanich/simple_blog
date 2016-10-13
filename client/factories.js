@@ -6,7 +6,7 @@ angular.module('SimpleBlog.factories', ['ngResource'])
     return p;
 }])
 .factory('Users', ['$resource', function($resource) {
-    var u = $resource('http://localhost:3000/api/users');
+    var u = $resource('http://localhost:3000/api/users/:id', { id: '@id' });
     return u;
 }])
 .factory('Categories', ['$resource', function($resource) {

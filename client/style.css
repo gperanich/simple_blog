@@ -58,6 +58,17 @@ body {
     border-bottom-color: #FEA680;
     margin-bottom: 10px
 }
+/* userList.html */
+.user-divs {
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FEA680;
+    background-color: white
+}
+#user-creator {
+    margin-bottom: 50px
+}
 /* newBlog.html % updateBlog.html css */
 #input-text {
     height: 1000px;

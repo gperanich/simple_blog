@@ -1,3 +1,6 @@
+<div>
+    <p><a ng-href="/users">User Management System</a></p>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -23,19 +26,19 @@
         <div class="col-md-12">
             <div class="blogs-body">
                 <div class="new-blog" ng-repeat="blog in blogs">
-                    <div class="blogs-container">
-                        <div class="blogs-header">
-                            <h3>{{ blog.title }}</h3>
-                            <p id="blog-username">{{ blog.firstname }} {{ blog.lastname }}</p>
-                            <p id="blog-categoryname">{{ blog.name }}</p>
-                            <p id="blog-timestamp">{{ blog.createdAt | date: 'short' }} </p>
-                            <a href="/{{ blog.id }}">Read</a>
-                        </div>
-                        <br>
-                        <div class="blogs-content">
-                            <div>{{ blog.content }}</div>
-                        </div>
+                    <!--<div class="blogs-header">
+                        <h3>{{ blog.title }}</h3>
+                        <p id="blog-username">{{ blog.firstname }} {{ blog.lastname }}</p>
+                        <p id="blog-categoryname">{{ blog.name }}</p>
+                        <p id="blog-timestamp">{{ blog.createdAt | date: 'short' }} </p>
+                        <a href="/{{ blog.id }}">Read</a>
                     </div>
+                    <br>
+                    <div class="blogs-content">
+                        <div>{{ blog.content }}</div>
+                    </div>-->
+                    <blog-post blog-data="blog"></blog-post>
+                    <p><a href="/{{ blog.id }}">Read</a></p>
                 </div>
             </div>
         </div>

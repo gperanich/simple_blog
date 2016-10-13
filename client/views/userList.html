@@ -1,0 +1,46 @@
+<div>
+    <p><a ng-click="logout()">Logout</a> of User Management System</p>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1>GPLA</h1>
+                <p>A quest to find the good vibrations. ¡Pura Vida!</p>
+                <p><a class="btn btn-primary btn-lg" href="/" role="button">Blog Posts</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="user-list">
+                <div class="user-divs" ng-repeat="user in users" id="{{ user.id }}">
+                    <p>{{ user.firstname }} {{ user.lastname }}</p>
+                    <p>{{ user.email }}</p>
+                    <button ng-click="deleteUser(user)">Delete</button>
+                    <!--<p><a href="/users/{{ user.id }}">view</a></p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="user-creator">
+                <h3>Create New User</h3>
+                <input type="text" ng-model="firstname" placeholder="First Name...">
+                <input type="text" ng-model="lastname" placeholder="Last Name...">
+                <input type="email" ng-model="email" placeholder="Email...">
+                <input type="password" ng-model="password" placeholder="Password">
+                <input type="password" ng-model="confirmPassword" placeholder="Confirm Password">
+                <button ng-click="newUser()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

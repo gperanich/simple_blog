@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="single-blog" ng-model="singleBlog">
-                <div id="single-header">
+                <!--<div id="single-header">
                     <h3>{{ singleBlog.title }}</h3>
                     <p>{{ singleBlog.firstname }} {{ singleBlog.lastname }}</p>
                     <p>{{ singleBlog.category }}</p>
@@ -22,7 +22,8 @@
                 </div>
                 <div id="single-content">
                     <div>{{ singleBlog.content }}</div>
-                </div>
+                </div>-->
+                <blog-post blog-data="singleBlog"></blog-post>
             </div>
         </div>
     </div>

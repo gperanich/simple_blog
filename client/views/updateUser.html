@@ -1,0 +1,16 @@
+<div>
+    <p><a href="/users">Back</a></p>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="user-list">
+                <div class="user-divs" id="{{ singleUser.id }}">
+                    <p>{{ singleUser.firstname }} {{ singleUser.lastname }}</p>
+                    <p>{{ singleUser.email }}</p>
+                    <button ng-click="deleteUser()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
