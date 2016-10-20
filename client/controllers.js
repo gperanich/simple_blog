@@ -1,5 +1,5 @@
 angular.module('SimpleBlog.controllers', [])
-.controller('WelcomeController', ['$scope', '$location', 'Posts', 'Users', 'Categories', function($scope, $location, Posts, Users, Categories) {
+.controller('WelcomeController', ['$scope', '$location', 'Posts', 'Users', 'Categories', 'SEOService', function($scope, $location, Posts, Users, Categories, SEOService) {
     $scope.blogs = Posts.query();
     $scope.users = Users.query();
     $scope.categories = Categories.query();
@@ -9,6 +9,13 @@ angular.module('SimpleBlog.controllers', [])
     $scope.newBlog = function() {
         $location.url('/compose');
     };
+
+    SEOService.setSEO({
+        title: 'Simple Blog | Home',
+        description: 'This is a blogging site. Blog on.',
+        image: 'http://' + $location.host() + '/images/pizza.png',
+        url: $location.absUrl()
+    });
 }])
 
 .controller('NewBlogController', ['$scope', '$routeParams', '$location', 'Posts', 'Users', 'Categories', 'UserService', function($scope, $routeParams, $location, Posts, Users, Categories, UserService) {
@@ -114,7 +121,7 @@ angular.module('SimpleBlog.controllers', [])
         if (!dest) {
             dest ='/'
         }
-        $location.path(dest).search('p', null);
+        $location.path(dest).search('p', null).replace();
     }
     $scope.login = function() {
         UserService.login($scope.email, $scope.password)
@@ -137,5 +144,20 @@ angular.module('SimpleBlog.controllers', [])
             $location.url('/users');
             Users.query();
         }
+    }
+}])
+
+.controller('ContactController', ['$scope', '$location', 'Email', function($scope, $location, Email) {
+    $scope.sendContactEmail = function () {
+        var emailData = {
+            toAddress: 'gperanich@gmail.com',
+            fromAddress: $scope.contactEmail,
+            subject: $scope.contactSubject,
+            emailBody: $scope.newContactEmail
+        }
+        var email = new Email(emailData);
+        email.$save();
+
+        $location.url('/')
     }
 }])

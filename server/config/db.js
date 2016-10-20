@@ -2,10 +2,10 @@ var mysql = require('mysql');
 
 var pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'localhost',
-    user: 'simpleBlogUser',
-    password: 'simpleBlogPass',
-    database: 'SimpleBlog'
+    host: process.env.RDS_HOSTNAME,
+    user: process.env.RDS_USER,
+    password: process.env.RDS_PASSWORD,
+    database: process.env.RDS_DATABASE
 });
 exports.pool = pool;
 

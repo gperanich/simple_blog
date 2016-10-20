@@ -1,15 +1,19 @@
 angular.module('SimpleBlog.factories', ['ngResource'])
 .factory('Posts', ['$resource', function($resource) {
-    var p = $resource('http://localhost:3000/api/posts/:id', { id: '@id' }, {
+    var p = $resource('/api/posts/:id', { id: '@id' }, {
         update: { method: 'PUT' }
     });
     return p;
 }])
 .factory('Users', ['$resource', function($resource) {
-    var u = $resource('http://localhost:3000/api/users/:id', { id: '@id' });
+    var u = $resource('/api/users/:id', { id: '@id' });
     return u;
 }])
 .factory('Categories', ['$resource', function($resource) {
-    var c = $resource('http://localhost:3000/api/categories');
+    var c = $resource('/api/categories');
     return c;
+}])
+.factory('Email', ['$resource', function($resource) {
+    var e = $resource('api/contact/:id', { id: '@id'});
+    return e;
 }]);

@@ -18,6 +18,10 @@ angular.module('SimpleBlog', ['ngRoute', 'ngResource', 'SimpleBlog.controllers',
         templateUrl: 'views/login.html',
         controller: 'LoginController'
     })
+    .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactController'
+    })
     .when('/:id/update', {
         templateUrl: 'views/updateBlog.html',
         controller: 'UpdateBlogController'

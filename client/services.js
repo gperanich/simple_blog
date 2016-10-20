@@ -17,8 +17,8 @@ angular.module('SimpleBlog.services', [])
     this.login = function(email, password) {
         return $http({
             method: 'POST',
-            url: 'http://localhost:3000/api/users/login',
-            data: { email, password }
+            url: '/api/users/login',
+            data: { email: email, password: password }
         }).then(function(success) {
             user = success.data;
             return success.data;
@@ -27,7 +27,7 @@ angular.module('SimpleBlog.services', [])
     this.logout = function() {
         return $http({
             method: 'GET',
-            url: 'http://localhost:3000/api/users/logout'
+            url: '/api/users/logout'
         }).then(function(success) {
             user = undefined;
         });
@@ -37,7 +37,7 @@ angular.module('SimpleBlog.services', [])
             return Promise.resolve(user);
         } else {
             return $http({
-                url: 'http://localhost:3000/api/users/me'
+                url: '/api/users/me'
             }).then(function(success) {
                 user = success.data;
                 return success.data;
@@ -45,3 +45,12 @@ angular.module('SimpleBlog.services', [])
         }
     }
 }])
+
+.service('SEOService', ['$rootScope', function($rootScope) {
+    this.setSEO = function(data) {
+        $rootScope.seo = {};
+        for (var p in data) {
+            $rootScope.seo[p] = data[p];
+        }
+    }
+}]);

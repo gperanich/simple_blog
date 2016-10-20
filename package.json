@@ -14,11 +14,14 @@
     "mysql": "^2.11.1",
     "npm": "^3.10.7",
     "passport": "^0.3.2",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "prerender-node": "^2.4.0",
+    "sendgrid": "^4.7.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "source .variables && nodemon",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",

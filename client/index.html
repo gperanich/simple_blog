@@ -3,6 +3,20 @@
     <head>
         <title>Simple Blog</title>
         <base href="/">
+        <meta charset="utf-8">
+        <meta name="fragment" content="!">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>{{ seo.title }}</title>
+        <meta property="og:title" content="{{ seo.title }}">
+        <meta property="twitter:title" content="{{seo.title}}">
+        <meta property="og:image" content="{{ seo.image }}">
+        <meta property="twitter:image" content="{{seo.image}}">
+        <meta property="og:url" content="{{ seo.url }}">
+        <meta property="twitter:url" content="{{ seo.url }}">
+        <meta property="description" content="{{ seo.description }}">
+        <meta property="og:description" content="{{ seo.description }">
+        <meta property="twitter:description" content="{{ seo.description }}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
